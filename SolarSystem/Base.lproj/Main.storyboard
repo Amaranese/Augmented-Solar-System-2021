@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="SolAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wef-8h-2Ru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyC-bJ-Kac">
+                                <rect key="frame" x="0.0" y="498" width="375" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Nr3-pW-0yW"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="N3K-JF-Vlu" kind="embed" id="gzJ-c6-rWU"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uyC-bJ-Kac" secondAttribute="trailing" id="7gk-f6-tuV"/>
+                            <constraint firstItem="uyC-bJ-Kac" firstAttribute="leading" secondItem="Wef-8h-2Ru" secondAttribute="leading" id="DnX-SF-Rbg"/>
+                            <constraint firstItem="0Sn-fk-BUk" firstAttribute="bottom" secondItem="uyC-bJ-Kac" secondAttribute="bottom" id="XIE-C5-gY2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Sn-fk-BUk"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wBF-bN-l1W" appends="YES" id="Mfk-Ro-hQJ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerBottomConstraint" destination="XIE-C5-gY2" id="QOT-2Y-1hw"/>
+                        <outlet property="datePickerHeightConstraint" destination="Nr3-pW-0yW" id="eb7-nQ-Kn0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wBF-bN-l1W">
+                    <connections>
+                        <action selector="tappedScreen:" destination="BV1-FR-VrT" id="hlb-Ta-Q8j"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="129.98500749625188"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="Fyy-93-uU0">
+            <objects>
+                <viewController id="N3K-JF-Vlu" customClass="DatePickerViewController" customModule="SolAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJp-fL-2tL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZY-kR-85g" userLabel="SelectorWrapper" customClass="WhiteView" customModule="SolAR" customModuleProvider="target">
+                                <rect key="frame" x="27.666666666666657" y="28" width="320" height="218"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-qV-gZc">
+                                        <rect key="frame" x="132.33333333333334" y="20" width="55" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="DONE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="N3K-JF-Vlu" eventType="touchUpInside" id="4OZ-Ih-NdK"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WvG-Jf-imt">
+                                        <rect key="frame" x="0.0" y="56" width="320" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="527036358.805076">
+                                            <!--2017-09-13 22:59:18 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerValueChange:" destination="N3K-JF-Vlu" eventType="valueChanged" id="ehe-u1-tab"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SAr-qV-gZc" firstAttribute="bottom" secondItem="WvG-Jf-imt" secondAttribute="top" id="6PY-oM-JY1"/>
+                                    <constraint firstItem="SAr-qV-gZc" firstAttribute="centerX" secondItem="SZY-kR-85g" secondAttribute="centerX" id="7BW-Jn-2JH"/>
+                                    <constraint firstItem="SAr-qV-gZc" firstAttribute="centerX" secondItem="WvG-Jf-imt" secondAttribute="centerX" id="7gC-WU-ZUK"/>
+                                    <constraint firstItem="SAr-qV-gZc" firstAttribute="top" secondItem="SZY-kR-85g" secondAttribute="top" constant="20" id="jJZ-io-nkv"/>
+                                    <constraint firstAttribute="width" secondItem="WvG-Jf-imt" secondAttribute="width" id="m65-KW-Ot0"/>
+                                    <constraint firstAttribute="bottom" secondItem="WvG-Jf-imt" secondAttribute="bottom" id="uCx-Qi-h48"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SZY-kR-85g" firstAttribute="centerX" secondItem="RoE-IO-fFg" secondAttribute="centerX" id="2U8-aP-zcS"/>
+                            <constraint firstItem="SZY-kR-85g" firstAttribute="bottom" secondItem="RoE-IO-fFg" secondAttribute="bottom" id="OvA-jo-lIf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RoE-IO-fFg"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="WvG-Jf-imt" id="UXF-nF-ihc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvd-pc-Ori" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-193"/>
+        </scene>
+    </scenes>
+</document>
