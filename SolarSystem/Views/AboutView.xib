@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutView" customModule="SolAR" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AboutView" customModule="SolAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="469"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3e-gva">
+                    <rect key="frame" x="0.0" y="34.5" width="378" height="400"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Jp-wm-tyL" userLabel="Top Text Wrapper">
+                            <rect key="frame" x="0.0" y="0.0" width="378" height="130"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjM-bR-TW3">
+                                    <rect key="frame" x="10" y="0.0" width="358" height="130"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="130" id="qcR-PG-f9w"/>
+                                    </constraints>
+                                    <string key="text">This Augmented Reality version of our Solar System based on ARKit provides a unique learning experience for those that are curious about our world and how it interacts with the its surroundings. With a quick tap you can explore the Planets in a realistic scale which, we think you'll find, is very eye opening.</string>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" secondItem="jjM-bR-TW3" secondAttribute="height" id="Ncm-Tz-8nU"/>
+                                <constraint firstItem="jjM-bR-TW3" firstAttribute="top" secondItem="9Jp-wm-tyL" secondAttribute="top" id="Q5h-TS-7Es"/>
+                                <constraint firstAttribute="trailing" secondItem="jjM-bR-TW3" secondAttribute="trailing" constant="10" id="U5T-vM-0Eb"/>
+                                <constraint firstItem="jjM-bR-TW3" firstAttribute="leading" secondItem="9Jp-wm-tyL" secondAttribute="leading" constant="10" id="dQ5-Iv-mOx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3g-WY-bds" userLabel="Made By Thumbworks Wrapper">
+                            <rect key="frame" x="0.0" y="130" width="378" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-AC-sHC">
+                                    <rect key="frame" x="160" y="-2.5" width="38" height="23"/>
+                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="9"/>
+                                    <state key="normal" title="Made by:">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hql-Ye-H5Z" userLabel="Thumbworks Button">
+                                    <rect key="frame" x="133.5" y="5.5" width="111" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="1zy-xr-8Oz"/>
+                                        <constraint firstAttribute="width" constant="111" id="dC1-IV-UXG"/>
+                                    </constraints>
+                                    <state key="normal" image="ThumbworksLogo"/>
+                                    <connections>
+                                        <action selector="visitThumbworks:" destination="iN0-l3-epB" eventType="touchUpInside" id="XE5-eu-PMf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="2Xw-Uf-7qY"/>
+                                <constraint firstItem="Hql-Ye-H5Z" firstAttribute="centerY" secondItem="a3g-WY-bds" secondAttribute="centerY" id="Dq0-Rz-YuD"/>
+                                <constraint firstItem="Io2-AC-sHC" firstAttribute="centerX" secondItem="Hql-Ye-H5Z" secondAttribute="centerX" constant="-10" id="biI-fH-qcz"/>
+                                <constraint firstItem="Hql-Ye-H5Z" firstAttribute="centerX" secondItem="a3g-WY-bds" secondAttribute="centerX" id="dSi-y2-SH7"/>
+                                <constraint firstItem="Io2-AC-sHC" firstAttribute="centerY" secondItem="Hql-Ye-H5Z" secondAttribute="centerY" constant="-13" id="eKa-0J-tAZ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17e-dH-9VT">
+                            <rect key="frame" x="0.0" y="174" width="378" height="100"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-Eq-CKT">
+                                    <rect key="frame" x="8" y="0.0" width="362" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="7Iw-M4-K66"/>
+                                    </constraints>
+                                    <string key="text">We are a Software Development shop focusing on delightful iOS experiences. If you would like to talk to us about building an Augmented Reality or any other iOS app, feel free to reach out.</string>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="bFb-Eq-CKT" secondAttribute="trailing" constant="8" id="RFk-Fx-7X4"/>
+                                <constraint firstItem="bFb-Eq-CKT" firstAttribute="leading" secondItem="17e-dH-9VT" secondAttribute="leading" constant="8" id="WcR-Wf-o9M"/>
+                                <constraint firstAttribute="height" secondItem="bFb-Eq-CKT" secondAttribute="height" id="c4A-YE-shx"/>
+                                <constraint firstItem="bFb-Eq-CKT" firstAttribute="top" secondItem="17e-dH-9VT" secondAttribute="top" id="eTV-ID-pIq"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-7x-FIR">
+                            <rect key="frame" x="0.0" y="274" width="378" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFw-wL-HAm">
+                                    <rect key="frame" x="106" y="-2" width="166" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="@thumbworksinc" image="TwitterBird"/>
+                                    <connections>
+                                        <action selector="visitTwitter:" destination="iN0-l3-epB" eventType="touchUpInside" id="TeJ-1j-RpY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="zFw-wL-HAm" firstAttribute="centerY" secondItem="gEZ-7x-FIR" secondAttribute="centerY" id="9oD-SM-jUK"/>
+                                <constraint firstAttribute="height" constant="36" id="pIl-8D-oT7"/>
+                                <constraint firstItem="zFw-wL-HAm" firstAttribute="centerX" secondItem="gEZ-7x-FIR" secondAttribute="centerX" id="sQp-5y-0l7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cp-2F-YbM" userLabel="See our other work">
+                            <rect key="frame" x="0.0" y="310" width="378" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nce-GY-Zkl">
+                                    <rect key="frame" x="10" y="2" width="358" height="32"/>
+                                    <gestureRecognizers/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="Tap to see our other work.">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="seeOtherApps:" destination="iN0-l3-epB" eventType="touchUpInside" id="bj0-jf-lSt"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="HGI-yY-42i"/>
+                                <constraint firstItem="nce-GY-Zkl" firstAttribute="centerY" secondItem="3Cp-2F-YbM" secondAttribute="centerY" id="QSG-In-baU"/>
+                                <constraint firstItem="nce-GY-Zkl" firstAttribute="centerX" secondItem="3Cp-2F-YbM" secondAttribute="centerX" id="agF-8m-uz5"/>
+                                <constraint firstItem="nce-GY-Zkl" firstAttribute="leading" secondItem="3Cp-2F-YbM" secondAttribute="leading" constant="10" id="iJa-dX-5NE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dB-7o-eHE" userLabel="Leave a review">
+                            <rect key="frame" x="29" y="346" width="320" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to leave us a ⭐️⭐️⭐️⭐️⭐️review." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-zB-cra">
+                                    <rect key="frame" x="10" y="12" width="300" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="8Ov-zB-cra" secondAttribute="trailing" constant="10" id="IWF-4c-xMa"/>
+                                <constraint firstAttribute="height" constant="44" id="WUZ-rQ-TG1"/>
+                                <constraint firstItem="8Ov-zB-cra" firstAttribute="leading" secondItem="6dB-7o-eHE" secondAttribute="leading" constant="10" id="flj-nI-pd4"/>
+                                <constraint firstItem="8Ov-zB-cra" firstAttribute="centerY" secondItem="6dB-7o-eHE" secondAttribute="centerY" id="ozO-ZF-exD"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="fXV-l4-7Ie" appends="YES" id="AxR-1Y-SnE"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VD-Am-IAg" userLabel="Bottom Buffer">
+                            <rect key="frame" x="39" y="390" width="300" height="10"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="jnO-7h-0iK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3Cp-2F-YbM" secondAttribute="trailing" id="752-pJ-0oc"/>
+                        <constraint firstAttribute="trailing" secondItem="a3g-WY-bds" secondAttribute="trailing" id="Iou-vp-CX1"/>
+                        <constraint firstItem="a3g-WY-bds" firstAttribute="leading" secondItem="vyS-3e-gva" secondAttribute="leading" id="M5h-nm-GfL"/>
+                        <constraint firstAttribute="trailing" secondItem="9Jp-wm-tyL" secondAttribute="trailing" id="MSD-bk-buw"/>
+                        <constraint firstAttribute="trailing" secondItem="gEZ-7x-FIR" secondAttribute="trailing" id="O0m-FT-yHV"/>
+                        <constraint firstItem="gEZ-7x-FIR" firstAttribute="leading" secondItem="vyS-3e-gva" secondAttribute="leading" id="PTD-Zd-Sso"/>
+                        <constraint firstItem="9Jp-wm-tyL" firstAttribute="leading" secondItem="vyS-3e-gva" secondAttribute="leading" id="Y1m-dF-gc1"/>
+                        <constraint firstItem="3Cp-2F-YbM" firstAttribute="leading" secondItem="vyS-3e-gva" secondAttribute="leading" id="hTR-ry-ynL"/>
+                        <constraint firstItem="17e-dH-9VT" firstAttribute="leading" secondItem="vyS-3e-gva" secondAttribute="leading" id="kAL-wN-bx8"/>
+                        <constraint firstAttribute="trailing" secondItem="17e-dH-9VT" secondAttribute="trailing" id="lfK-kY-aFp"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="1dU-7P-1xO"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vyS-3e-gva" secondAttribute="trailing" id="Jed-7O-vIa"/>
+                <constraint firstItem="vyS-3e-gva" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="34.5" id="KEG-RF-799"/>
+                <constraint firstItem="vyS-3e-gva" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YSr-TD-X13"/>
+                <constraint firstItem="vyS-3e-gva" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="plg-tB-1jg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vyS-3e-gva" secondAttribute="bottom" constant="34.5" id="y3d-3s-Utv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottomText" destination="bFb-Eq-CKT" id="fYo-4p-SHu"/>
+                <outlet property="topText" destination="jjM-bR-TW3" id="Xsn-nD-YdP"/>
+            </connections>
+            <point key="canvasLocation" x="56" y="171.36431784107947"/>
+        </view>
+        <tapGestureRecognizer id="fXV-l4-7Ie">
+            <connections>
+                <action selector="rateTheApp:" destination="iN0-l3-epB" id="QFZ-2K-iCw"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ThumbworksLogo" width="333" height="99"/>
+        <image name="TwitterBird" width="40" height="40"/>
+    </resources>
+</document>
