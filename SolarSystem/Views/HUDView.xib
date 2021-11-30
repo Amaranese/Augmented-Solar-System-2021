@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HUDView" customModule="SolAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="152"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGq-Ym-ha7" userLabel="BackgroundView" customClass="WhiteView" customModule="SolAR" customModuleProvider="target">
+                    <rect key="frame" x="10" y="0.0" width="352" height="152"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="352" id="tC9-F3-8vF"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BV7-pR-ujV">
+                    <rect key="frame" x="30" y="10" width="209" height="132"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YgI-yX-FIw" userLabel="PlanetCollectionView">
+                            <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="YgI-yX-FIw" secondAttribute="height" id="SBT-Ye-3o2"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5dX-kn-cQL">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6Iq-rI-qJf">
+                            <rect key="frame" x="142" y="0.0" width="67" height="132"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9y-S9-orx">
+                                    <rect key="frame" x="0.0" y="0.0" width="67" height="43.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Axial" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-07-Y96">
+                                    <rect key="frame" x="0.0" y="47.5" width="67" height="24.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agX-PC-hhH">
+                                    <rect key="frame" x="0.0" y="76" width="67" height="25"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiL-Ob-Zmu">
+                                    <rect key="frame" x="0.0" y="105" width="67" height="27"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PGq-Ym-ha7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="7Se-Vh-dux"/>
+                <constraint firstItem="BV7-pR-ujV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="BUq-CK-TtT"/>
+                <constraint firstItem="BV7-pR-ujV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="HtL-wp-mD5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PGq-Ym-ha7" secondAttribute="trailing" constant="10" id="dbz-3H-CRN"/>
+                <constraint firstItem="PGq-Ym-ha7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gz1-fX-i9I"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PGq-Ym-ha7" secondAttribute="bottom" id="of1-Og-p9F"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BV7-pR-ujV" secondAttribute="bottom" constant="10" id="qa0-HR-GLQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="axial" destination="gmp-07-Y96" id="a0z-14-V0u"/>
+                <outlet property="collectionView" destination="YgI-yX-FIw" id="8H2-li-dHb"/>
+                <outlet property="distance" destination="HiL-Ob-Zmu" id="mJ1-0a-73b"/>
+                <outlet property="radius" destination="agX-PC-hhH" id="cG4-yz-IhY"/>
+                <outlet property="title" destination="S9y-S9-orx" id="GCM-EI-Yrx"/>
+            </connections>
+            <point key="canvasLocation" x="136" y="112.44377811094454"/>
+        </view>
+    </objects>
+</document>
